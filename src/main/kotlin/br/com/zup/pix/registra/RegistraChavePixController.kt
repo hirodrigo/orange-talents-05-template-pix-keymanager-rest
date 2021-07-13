@@ -28,6 +28,7 @@ class RegistraChavePixController(
 
         val grpcResponse = registraChavePixClient.cadastrar(request.paraModeloGrpc(clienteId))
 
+        logger.info("Chave ${grpcResponse.pixId} registrada com sucesso!")
         return HttpResponse.created(location(clienteId, grpcResponse.pixId))
     }
 
