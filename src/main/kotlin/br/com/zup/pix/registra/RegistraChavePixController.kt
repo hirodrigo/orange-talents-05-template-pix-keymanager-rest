@@ -34,5 +34,4 @@ class RegistraChavePixController(
     private fun location(clienteId: UUID, pixId: String) =
         HttpResponse.uri("/api/v1/clientes/${clienteId}/pix/${pixId}")
 
-
 }
