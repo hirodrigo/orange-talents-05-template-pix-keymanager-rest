@@ -29,7 +29,7 @@ class ListaChavesPixController(
                 .setClienteId(clienteId.toString())
                 .build()
         )
-        logger.info("Chaves do cliente $clienteId consultadas com sucesso!")
+        logger.info("Chaves do cliente $clienteId listadas com sucesso!")
         return HttpResponse.ok(ListaChavesPixResponse(grpcResponse))
     }
 }
